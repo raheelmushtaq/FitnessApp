@@ -18,10 +18,7 @@ import com.zert.fitness.ui.components.bottomtab.NavigationGraph
 @Destination()
 @Composable
 fun Home() {
-    val navController = rememberNavController()
-    Scaffold(bottomBar = { BottomTabBar(navController = navController) }) { paddingValue ->
-        NavigationGraph(navController = navController, modifier = Modifier.padding(paddingValue))
-    }
+
 }
 
 @Preview

@@ -37,6 +37,7 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.zert.fitness.R
 import com.zert.fitness.ui.screens.destinations.HomeDestination
 import com.zert.fitness.ui.screens.destinations.SplashScreenDestination
+import com.zert.fitness.ui.screens.destinations.WorkoutScreenDestination
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -59,7 +60,7 @@ fun SplashScreen(
         viewModel.uiEvent.collectLatest { event ->
             when (event) {
                 is SplashViewModel.UIEvent.Success -> {
-                    navHostController.navigate(HomeDestination()) {
+                    navHostController.navigate(WorkoutScreenDestination()) {
                         launchSingleTop = true
                         popUpTo(SplashScreenDestination.route) {
                             inclusive = true
