@@ -29,6 +29,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ramcosta.composedestinations.navigation.navigate
 import com.ramcosta.composedestinations.navigation.popBackStack
 import com.ramcosta.composedestinations.navigation.popUpTo
+import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
 import com.ramcosta.composedestinations.utils.isRouteOnBackStack
 import com.zert.fitness.R
 import com.zert.fitness.ui.screens.NavGraphs
@@ -66,7 +67,6 @@ fun BottomTabBar(
                                 else
                                     R.color.blue
                             ),
-                            blendMode = BlendMode.Overlay
                         )
                     )
                 },
@@ -101,7 +101,7 @@ fun BottomTabBar(
 
 
 sealed class BottomTabBarsItems(
-    val destination: DirectionDestination,
+    val destination: DirectionDestinationSpec,
     val title: Int,
     val icon: Int
 ) {

@@ -1,4 +1,4 @@
-package com.zert.fitness.ui.screens.workout
+package com.zert.fitness.ui.screens.workout_detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -11,40 +11,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.zert.fitness.R
 import com.zert.fitness.data.data_source.entities.Exercises
 import com.zert.fitness.ui.components.AppHeader
 import com.zert.fitness.ui.components.TestItem.TestItem
-import com.zert.fitness.ui.screens.destinations.WorkOutDetailScreenDestination
-import com.zert.fitness.ui.screens.workout_detail.WorkOutDetailScreen
 import com.zert.fitness.utils.PaddingsConst
 
 @Composable
 @Destination
-fun WorkoutScreen(navigator: DestinationsNavigator) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = Color.Blue)
-    ) {
-        /*AppHeader(
-            navHostController = navHostController,
+fun WorkOutDetailScreen(navigator: DestinationsNavigator) {
+    Column(modifier = Modifier.fillMaxSize().background(color = Color.Blue)) {
+        AppHeader(
+            navHostController = navigator,
             title = stringResource(id = R.string.workout),
             showBackButton = false
-        )*/
-        LazyColumn(content = {
-            items(arrayListOf(Exercises("hello workout"), Exercises("hello 1"))) {
-                TestItem(modifier = Modifier, item = it) {
-                    navigator.navigate(WorkOutDetailScreenDestination())
-                }
+        )
+        TestItem(modifier = Modifier, item = Exercises("Work Out Detail Screen") )
 
-            }
-        }, modifier = Modifier.padding(PaddingsConst.appPadding))
     }
 }
 

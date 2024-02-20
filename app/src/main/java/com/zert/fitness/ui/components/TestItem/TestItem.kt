@@ -24,7 +24,7 @@ import com.zert.fitness.ui.components.TextComponent.TextComponent
 @Composable
 fun TestItem(modifier: Modifier, item: Exercises, onItemClick: (Exercises) -> Unit = {}) {
     Column {
-        CardComponent {
+        CardComponent(onClickAction = { onItemClick(item) }) {
 
             Row(
                 modifier = modifier
