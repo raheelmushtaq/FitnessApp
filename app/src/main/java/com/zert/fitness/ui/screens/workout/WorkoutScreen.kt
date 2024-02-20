@@ -24,15 +24,15 @@ import com.zert.fitness.utils.PaddingsConst
 
 @Composable
 @Destination
-fun WorkoutScreen(navHostController: DestinationsNavigator) {
-    Column(modifier = Modifier.fillMaxSize().background(color = Color.Cyan)) {
-        AppHeader(
+fun WorkoutScreen() {
+    Column(modifier = Modifier.fillMaxSize().background(color = Color.Blue)) {
+        /*AppHeader(
             navHostController = navHostController,
             title = stringResource(id = R.string.workout),
             showBackButton = false
-        )
+        )*/
         LazyColumn(content = {
-            items(arrayListOf(Exercises("hello"), Exercises("hello 1"))) {
+            items(arrayListOf(Exercises("hello workout"), Exercises("hello 1"))) {
                 TestItem(modifier = Modifier, item = it)
 
             }

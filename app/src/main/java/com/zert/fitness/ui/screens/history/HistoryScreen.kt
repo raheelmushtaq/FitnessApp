@@ -1,5 +1,6 @@
 package com.zert.fitness.ui.screens.history
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -7,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
@@ -21,15 +23,15 @@ import com.zert.fitness.utils.PaddingsConst
 
 @Composable
 @Destination()
-fun HistoryScreen(navHostController: DestinationsNavigator) {
-    Column(modifier = Modifier.fillMaxSize()) {
-        AppHeader(
+fun HistoryScreen() {
+    Column(modifier = Modifier.fillMaxSize().background(color = Color.Green)) {
+       /* AppHeader(
             navHostController = navHostController,
             title = stringResource(id = R.string.history),
             showBackButton = false
-        )
+        )*/
         LazyColumn(content = {
-            items(arrayListOf(Exercises("hello"), Exercises("hello 1"))) {
+            items(arrayListOf(Exercises("hello history"), Exercises("hello 1"))) {
                 TestItem(modifier = Modifier, item = it)
 
             }
