@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Fitness</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="time">Time</string>
+    <string name="select_time">Select Time</string>
+    <string name="save">Save</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
+    <string name="test_passed">You have passed the Test</string>
+    <string name="test_failed">You have Failed the Test</string>
+    <string name="confirmation">Confirmation!</string>
+    <string name="confirmation_cancel_test">Are you sure you want to cancel the test?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="quiz">Quiz</string>
+    <string name="Result">Result</string>
+    <string name="back">Back</string>
+    <string name="retry">Retry</string>
+    <string name="workout">Workout</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
 </resources>
